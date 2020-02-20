@@ -10,7 +10,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace BugAssist.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -20,11 +19,13 @@ namespace BugAssist.Controllers
             _logger = logger;
         }
 
+        [AllowAnonymous]
         public IActionResult Index()
         {
             return View();
         }
 
+        [Authorize(Roles = "Administrator")]
         public IActionResult Privacy()
         {
             return View();
