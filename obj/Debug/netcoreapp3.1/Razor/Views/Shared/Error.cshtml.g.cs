@@ -27,14 +27,21 @@ using BugAssist.Models;
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Jayden\Documents\University\Side Projects\BugAssist\Views\_ViewImports.cshtml"
+#line 3 "C:\Users\Jayden\Documents\University\Side Projects\BugAssist\Views\_ViewImports.cshtml"
+using BugAssist.Models.Administration;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\Jayden\Documents\University\Side Projects\BugAssist\Views\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d6a5625cc8fb4476f348b0fe9041c550465d8bf9", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a34e185ae3127803963e57acc58c72d7fcc9b9ef", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a7b7e8b064cd2b57ec3018555ca368d4635e569c", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998

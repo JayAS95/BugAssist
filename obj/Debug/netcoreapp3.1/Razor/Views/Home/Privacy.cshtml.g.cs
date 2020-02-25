@@ -27,14 +27,21 @@ using BugAssist.Models;
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Jayden\Documents\University\Side Projects\BugAssist\Views\_ViewImports.cshtml"
+#line 3 "C:\Users\Jayden\Documents\University\Side Projects\BugAssist\Views\_ViewImports.cshtml"
+using BugAssist.Models.Administration;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\Jayden\Documents\University\Side Projects\BugAssist\Views\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d8ddb6bffa5a9b264bf8f89038bf03c234083fd3", @"/Views/Home/Privacy.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a34e185ae3127803963e57acc58c72d7fcc9b9ef", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a7b7e8b064cd2b57ec3018555ca368d4635e569c", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Privacy : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

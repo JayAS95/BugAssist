@@ -1,24 +1,24 @@
-﻿@model IEnumerable<IdentityRole>
+﻿@model IEnumerable<IdentityUser>
 
-@{ 
-    ViewBag.Title = "All Roles";
+@{
+    ViewBag.Title = "All Users";
 }
 
-<h1>All Roles</h1>
+<h1>All Users</h1>
 
 @if (Model.Any())
 {
-    <a class="btn btn-primary mb-3" style="width:auto" asp-action="CreateRole"
-       asp-controller="administration">Add new role</a>
+    <a class="btn btn-primary mb-3" style="width:auto" asp-action="CreateUser"
+       asp-controller="User">Add new User</a>
 
-    foreach (var role in Model)
+    foreach (var user in Model)
     {
         <div class="card mb-3">
             <div class="card-header">
-                Role Id : @role.Id
+                User Id : @user.Id
             </div>
             <div class="card-body">
-                <h5 class="card-title">@role.Name</h5>
+                <h5 class="card-title">@user.UserName</h5>
             </div>
             <div class="card-footer">
                 <a href="#" class="btn btn-primary">Edit</a>
@@ -29,18 +29,17 @@
 }
 else
 {
-
     <div class="card">
         <div class="card-header">
-            No roles created yet
+            No Users created yet
         </div>
         <div class="card-body">
             <h5 class="card-title">
-                Use the button bellow to create a role
+                Use the button bellow to create a User
             </h5>
             <a class="btn btn-primary" style="width:auto"
-                asp-controller="administration" asp-action="CreateRole">
-                Create Role
+               asp-controller="User" asp-action="CreateUser">
+                Create User
             </a>
         </div>
     </div>

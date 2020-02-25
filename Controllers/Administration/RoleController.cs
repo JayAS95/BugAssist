@@ -1,4 +1,4 @@
-﻿using BugAssist.Models;
+﻿using BugAssist.Models.Administration;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace BugAssist.Controllers
 {
-    public class AdministrationController : Controller
+    public class RoleController : Controller
     {
+
         private readonly RoleManager<IdentityRole> roleManager;
 
-        public AdministrationController(RoleManager<IdentityRole> roleManager)
+        public RoleController(RoleManager<IdentityRole> roleManager)
         {
             this.roleManager = roleManager;
         }
@@ -24,16 +25,16 @@ namespace BugAssist.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateRole(CreateRoleModel model)
+        public async Task<IActionResult> CreateRole(RoleModel role)
         {
             if (ModelState.IsValid)
             {
-                IdentityRole identityRole = new IdentityRole
+                IdentityRole IdentityRole = new IdentityRole
                 {
-                    Name = model.RoleName
+                    Name = role.RoleName
                 };
 
-                IdentityResult result = await roleManager.CreateAsync(identityRole);
+                IdentityResult result = await roleManager.CreateAsync(IdentityRole);
 
                 if (result.Succeeded)
                 {
@@ -47,7 +48,7 @@ namespace BugAssist.Controllers
 
             }
 
-            return View(model);
+            return View(role);
         }
 
         [HttpGet]

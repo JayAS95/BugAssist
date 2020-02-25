@@ -152,5 +152,7 @@ C:\Users\Jayden\Documents\University\Side Projects\BugAssist\bin\Debug\netcoreap
 C:\Users\Jayden\Documents\University\Side Projects\BugAssist\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Jayden\Documents\University\Side Projects\BugAssist\obj\Debug\netcoreapp3.1\BugAssist.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Jayden\Documents\University\Side Projects\BugAssist\obj\Debug\netcoreapp3.1\BugAssist.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Jayden\Documents\University\Side Projects\BugAssist\obj\Debug\netcoreapp3.1\Razor\Views\Administration\CreateRole.cshtml.g.cs
-C:\Users\Jayden\Documents\University\Side Projects\BugAssist\obj\Debug\netcoreapp3.1\Razor\Views\Administration\ListRoles.cshtml.g.cs
+C:\Users\Jayden\Documents\University\Side Projects\BugAssist\obj\Debug\netcoreapp3.1\Razor\Views\Role\CreateRole.cshtml.g.cs
+C:\Users\Jayden\Documents\University\Side Projects\BugAssist\obj\Debug\netcoreapp3.1\Razor\Views\Role\ListRoles.cshtml.g.cs
+C:\Users\Jayden\Documents\University\Side Projects\BugAssist\obj\Debug\netcoreapp3.1\Razor\Views\User\CreateUser.cshtml.g.cs
+C:\Users\Jayden\Documents\University\Side Projects\BugAssist\obj\Debug\netcoreapp3.1\Razor\Views\User\ListUsers.cshtml.g.cs

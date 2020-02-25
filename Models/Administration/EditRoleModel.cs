@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BugAssist.ViewModel
+namespace BugAssist.Model.Administration
 {
-    public class EditRoleViewModel
+    public class EditRoleModel
     {
         public int Id { get; set; }
 

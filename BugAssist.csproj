@@ -5,6 +5,12 @@
     <UserSecretsId>aspnet-BugAssist-606CEAFC-4694-4E06-B044-B379C93A7A71</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Controllers\AdministrationController - Copy.cs" />
+    <Compile Remove="Controllers\AdministrationController.cs" />
+    <Compile Remove="Controllers\UserController-ORG.cs" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.1" />
