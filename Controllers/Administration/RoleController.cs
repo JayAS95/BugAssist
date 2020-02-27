@@ -1,4 +1,5 @@
 ﻿using BugAssist.Models.Administration;
+using BugAssist.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -38,7 +39,7 @@ namespace BugAssist.Controllers
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("ListRoles", "Administration");
+                    return RedirectToAction("ListRoles", "Role");
                 }
 
                 foreach (IdentityError error in result.Errors)
@@ -51,11 +52,75 @@ namespace BugAssist.Controllers
             return View(role);
         }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         [HttpGet]
         public IActionResult ListRoles()
         {
             var roles = roleManager.Roles;
             return View(roles);
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public async Task<IActionResult> UpdateRole(string Id)
+        {
+            IdentityRole role = await roleManager.FindByIdAsync(Id);
+            if (role != null)
+                return View(role);
+            else
+                return RedirectToAction("ListRoles", "Role");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateRole(string Id, string Name)
+        {
+
+            IdentityRole role = await roleManager.FindByIdAsync(Id);
+            if (role != null)
+            {
+                if (!string.IsNullOrEmpty(Name))
+                    role.Name = Name;
+                else
+                    ModelState.AddModelError("", "Role cannot be empty");
+
+                if (!string.IsNullOrEmpty(Name))
+                {
+                    IdentityResult result = await roleManager.UpdateAsync(role);
+                    if (result.Succeeded)
+                        return RedirectToAction("ListRoles", "Role");
+                    else
+                        Errors(result);
+                }
+            }
+            else
+                ModelState.AddModelError("", "Role Not Found");
+            return View(role);
+        }
+
+        private void Errors(IdentityResult result)
+        {
+            foreach (IdentityError error in result.Errors)
+                ModelState.AddModelError("", error.Description);
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteRole(string Id)
+        {
+            IdentityRole role = await roleManager.FindByIdAsync(Id);
+            if (role != null)
+            {
+                IdentityResult result = await roleManager.DeleteAsync(role);
+                if (result.Succeeded)
+                    return RedirectToAction("ListRoles", "Role");
+                else
+                    Errors(result);
+            }
+            else
+                ModelState.AddModelError("", "Role Not Found");
+            return View(role);
         }
     }
 }

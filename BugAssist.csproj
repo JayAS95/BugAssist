@@ -9,6 +9,12 @@
     <Compile Remove="Controllers\AdministrationController - Copy.cs" />
     <Compile Remove="Controllers\AdministrationController.cs" />
     <Compile Remove="Controllers\UserController-ORG.cs" />
+    <Compile Remove="Models\Administration\EditRoleModel.cs" />
+    <Compile Remove="Models\Administration\EditUserModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\User\UpdateUser-ORG.cshtml" />
   </ItemGroup>
 
 

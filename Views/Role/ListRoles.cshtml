@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<IdentityRole>
 
-@{ 
+@{
     ViewBag.Title = "All Roles";
 }
 
@@ -8,24 +8,30 @@
 
 @if (Model.Any())
 {
-    <a class="btn btn-primary mb-3" style="width:auto" asp-action="CreateRole"
-       asp-controller="Role">Add new role</a>
+    <a class="btn btn-primary mb-3" style="width:auto" asp-action="CreateRole" asp-controller="Role">Add new role</a>
 
-    foreach (var role in Model)
-    {
-        <div class="card mb-3">
-            <div class="card-header">
-                Role Id : @role.Id
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">@role.Name</h5>
-            </div>
-            <div class="card-footer">
-                <a href="#" class="btn btn-primary">Edit</a>
-                <a href="#" class="btn btn-danger">Delete</a>
-            </div>
+    <div class="card mb-3">
+        <div class="card-body">
+            <table class="table table-sm table-bordered">
+                <tr><th>Id</th><th>Role</th><th>Users</th><th>Update</th><th>Delete</th></tr>
+                @foreach (var role in Model)
+                {
+            <tr>
+                <td>@role.Id</td>
+                <td>@role.Name</td>
+                <td i-role="@role.Id"></td>
+                <td><a class="btn btn-sm btn-primary" asp-action="UpdateAuthorization" asp-controller="Authorization" asp-route-id="@role.Id">Update</a></td>
+                <td>
+                    <form asp-action="DeleteRole" asp-route-id="@role.Id" method="post">
+                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+                }
+            </table>
         </div>
-    }
+    </div>
+
 }
 else
 {
@@ -38,7 +44,7 @@ else
                 Use the button bellow to create a role
             </h5>
             <a class="btn btn-primary" style="width:auto"
-                asp-controller="Role" asp-action="CreateRole">
+               asp-controller="Role" asp-action="CreateRole">
                 Create Role
             </a>
         </div>

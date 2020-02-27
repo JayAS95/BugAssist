@@ -156,3 +156,5 @@ C:\Users\Jayden\Documents\University\Side Projects\BugAssist\obj\Debug\netcoreap
 C:\Users\Jayden\Documents\University\Side Projects\BugAssist\obj\Debug\netcoreapp3.1\Razor\Views\Role\ListRoles.cshtml.g.cs
 C:\Users\Jayden\Documents\University\Side Projects\BugAssist\obj\Debug\netcoreapp3.1\Razor\Views\User\CreateUser.cshtml.g.cs
 C:\Users\Jayden\Documents\University\Side Projects\BugAssist\obj\Debug\netcoreapp3.1\Razor\Views\User\ListUsers.cshtml.g.cs
+C:\Users\Jayden\Documents\University\Side Projects\BugAssist\obj\Debug\netcoreapp3.1\Razor\Views\User\UpdateUser.cshtml.g.cs
+C:\Users\Jayden\Documents\University\Side Projects\BugAssist\obj\Debug\netcoreapp3.1\Razor\Views\Authorization\UpdateAuthorization.cshtml.g.cs
