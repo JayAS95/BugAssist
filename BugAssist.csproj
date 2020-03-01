@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Identity\Pages\Account\Login - Copy.cshtml.cs" />
     <Compile Remove="Controllers\AdministrationController - Copy.cs" />
     <Compile Remove="Controllers\AdministrationController.cs" />
     <Compile Remove="Controllers\UserController-ORG.cs" />
@@ -14,7 +15,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="Areas\Identity\Pages\Account\Login - Copy.cshtml" />
     <Content Remove="Views\User\UpdateUser-ORG.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\BugAssist - Vector.png" />
   </ItemGroup>
 
 
@@ -25,11 +31,6 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Folder Include="Areas\Identity\Data\" />
   </ItemGroup>
 
 </Project>

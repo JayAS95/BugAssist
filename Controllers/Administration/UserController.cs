@@ -10,10 +10,10 @@ namespace BugAssist.Controllers
 {
     public class UserController : Controller
     {
-        private readonly UserManager<ApplicationUser> userManager;
-        private readonly IPasswordHasher<ApplicationUser> passwordHasher;
+        private readonly UserManager<IdentityUser> userManager;
+        private readonly IPasswordHasher<IdentityUser> passwordHasher;
 
-        public UserController(UserManager<ApplicationUser> userManager, IPasswordHasher<ApplicationUser> passwordHasher)
+        public UserController(UserManager<IdentityUser> userManager, IPasswordHasher<IdentityUser> passwordHasher)
         {
             this.userManager = userManager;
             this.passwordHasher = passwordHasher;
@@ -30,13 +30,13 @@ namespace BugAssist.Controllers
         {
             if (ModelState.IsValid)
             {
-                ApplicationUser applicationUser = new ApplicationUser
+                IdentityUser IdentityUser = new IdentityUser
                 {
                     UserName = user.UserName,
                     Email = user.Email,
                 };
 
-                IdentityResult result = await userManager.CreateAsync(applicationUser, user.Password);
+                IdentityResult result = await userManager.CreateAsync(IdentityUser, user.Password);
 
                 if (result.Succeeded)
                     return RedirectToAction("ListUsers", "User");
@@ -62,7 +62,7 @@ namespace BugAssist.Controllers
 
         public async Task<IActionResult> UpdateUser(string Id)
         {
-            ApplicationUser user = await userManager.FindByIdAsync(Id);
+            IdentityUser user = await userManager.FindByIdAsync(Id);
             if (user != null)
                 return View(user);            
             else
@@ -72,7 +72,7 @@ namespace BugAssist.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateUser(string Id, string UserName, string Email, string Password)
         {
-            ApplicationUser user = await userManager.FindByIdAsync(Id);
+            IdentityUser user = await userManager.FindByIdAsync(Id);
             if (user != null)
             {
                 if (!string.IsNullOrEmpty(UserName))
@@ -115,7 +115,7 @@ namespace BugAssist.Controllers
         [HttpPost]
         public async Task<IActionResult> DeleteUser(string Id)
         {
-            ApplicationUser user = await userManager.FindByIdAsync(Id);
+            IdentityUser user = await userManager.FindByIdAsync(Id);
             if (user != null)
             {
                 IdentityResult result = await userManager.DeleteAsync(user);

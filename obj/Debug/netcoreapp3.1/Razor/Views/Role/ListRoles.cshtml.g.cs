@@ -41,7 +41,7 @@ using Microsoft.AspNetCore.Identity;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"571744644d9e3673e2d4a847339b230fde1827fb", @"/Views/Role/ListRoles.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"543343caef20076355678bde649dd8615550df89", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"75931e8c3cfc3146f80492ce8a6862f96556d8fe", @"/Views/_ViewImports.cshtml")]
     public class Views_Role_ListRoles : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<IdentityRole>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn btn-primary mb-3"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -75,6 +75,7 @@ using Microsoft.AspNetCore.Identity;
             }
         }
         private global::Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper;
+        private global::BugAssist.TagHelpers.RoleUsersTH __BugAssist_TagHelpers_RoleUsersTH;
         private global::Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper;
         private global::Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper;
         #pragma warning disable 1998
@@ -99,7 +100,7 @@ using Microsoft.AspNetCore.Identity;
 #line hidden
 #nullable disable
             WriteLiteral("    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "571744644d9e3673e2d4a847339b230fde1827fb7567", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "571744644d9e3673e2d4a847339b230fde1827fb7661", async() => {
                 WriteLiteral("Add new role");
             }
             );
@@ -144,18 +145,32 @@ using Microsoft.AspNetCore.Identity;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("</td>\r\n                <td");
-            BeginWriteAttribute("i-role", " i-role=\"", 634, "\"", 651, 1);
+            WriteLiteral("</td>\r\n                ");
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("td", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "571744644d9e3673e2d4a847339b230fde1827fb10283", async() => {
+            }
+            );
+            __BugAssist_TagHelpers_RoleUsersTH = CreateTagHelper<global::BugAssist.TagHelpers.RoleUsersTH>();
+            __tagHelperExecutionContext.Add(__BugAssist_TagHelpers_RoleUsersTH);
+            BeginWriteTagHelperAttribute();
 #nullable restore
 #line 22 "C:\Users\Jayden\Documents\University\Side Projects\BugAssist\Views\Role\ListRoles.cshtml"
-WriteAttributeValue("", 643, role.Id, 643, 8, false);
+                WriteLiteral(role.Id);
 
 #line default
 #line hidden
 #nullable disable
-            EndWriteAttribute();
-            WriteLiteral("></td>\r\n                <td>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "571744644d9e3673e2d4a847339b230fde1827fb10589", async() => {
+            __tagHelperStringValueBuffer = EndWriteTagHelperAttribute();
+            __BugAssist_TagHelpers_RoleUsersTH.Role = __tagHelperStringValueBuffer;
+            __tagHelperExecutionContext.AddTagHelperAttribute("i-role", __BugAssist_TagHelpers_RoleUsersTH.Role, global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+            if (!__tagHelperExecutionContext.Output.IsContentModified)
+            {
+                await __tagHelperExecutionContext.SetOutputContentAsync();
+            }
+            Write(__tagHelperExecutionContext.Output);
+            __tagHelperExecutionContext = __tagHelperScopeManager.End();
+            WriteLiteral("\r\n                <td>");
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "571744644d9e3673e2d4a847339b230fde1827fb11773", async() => {
                 WriteLiteral("Update");
             }
             );
@@ -189,7 +204,7 @@ WriteAttributeValue("", 643, role.Id, 643, 8, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</td>\r\n                <td>\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "571744644d9e3673e2d4a847339b230fde1827fb13167", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "571744644d9e3673e2d4a847339b230fde1827fb14351", async() => {
                 WriteLiteral("\r\n                        <button type=\"submit\" class=\"btn btn-sm btn-danger\">Delete</button>\r\n                    ");
             }
             );
@@ -251,7 +266,7 @@ else
                 Use the button bellow to create a role
             </h5>
             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "571744644d9e3673e2d4a847339b230fde1827fb16738", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "571744644d9e3673e2d4a847339b230fde1827fb17922", async() => {
                 WriteLiteral("\r\n                Create Role\r\n            ");
             }
             );

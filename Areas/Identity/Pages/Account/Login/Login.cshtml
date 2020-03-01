@@ -1,0 +1,23 @@
+﻿@page
+@model LoginModel
+
+    <form class="form-signin" id="account" method="post">
+        <img class="mb-4" src="~/Images/BugAssist - Vector.png" alt="" width="172" height="172">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <label asp-for="Input.UserName" class="sr-only">Username</label>
+        <input asp-for="Input.UserName" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+        <label asp-for="Input.Password" class="sr-only">Password</label>
+        <input asp-for="Input.Password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox mb-3">
+            <label asp-for="Input.RememberMe">
+                <input asp-for="Input.RememberMe" type="checkbox" value="remember-me">
+                @Html.DisplayNameFor(m => m.Input.RememberMe)
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">
+            &copy; 2020 - BugAssist - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </p>
+    </form>
+
+

@@ -19,7 +19,7 @@ namespace BugAssist.Controllers
             _logger = logger;
         }
 
-        [AllowAnonymous]
+        [Authorize]
         public IActionResult Index()
         {
             return View();

@@ -9,10 +9,10 @@ namespace BugAssist.TagHelpers
     [HtmlTargetElement("td", Attributes = "i-role")]
     public class RoleUsersTH : TagHelper
     {
-        private readonly UserManager<ApplicationUser> UserManager;
+        private readonly UserManager<IdentityUser> UserManager;
         private readonly RoleManager<IdentityRole> RoleManager;
 
-        public RoleUsersTH(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
+        public RoleUsersTH(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             UserManager = userManager;
             RoleManager = roleManager;

@@ -1,4 +1,4 @@
-﻿@model ApplicationUser
+﻿@model IdentityUser
 
 @{
     ViewBag.Title = "Update User";
@@ -23,10 +23,6 @@
             <div class="form-group">
                 <label asp-for="Email"></label>
                 <input asp-for="Email" class="form-control" />
-            </div>
-            <div class="form-group">
-                <label for="Password">Password</label>
-                <input for="Password" name="Password" class="form-control" />
             </div>
             <button type="submit" class="btn btn-primary">Save</button>
         </form>
